@@ -1,0 +1,28 @@
+﻿@model List<WebAppEmp.Models.Employee>
+
+@{
+    ViewData["Title"] = "ListEmployee";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>List of Employee Data</h1>
+<br />
+<br />
+<table class="table table-striped">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Salary</th>
+    </tr>
+    @foreach (var e in Model)
+    {
+        <tr>
+            <td>@e.Id</td>
+            <td>@e.Name</td>
+            <td>@e.Salary</td>
+        </tr>
+    }
+
+</table>
+
+

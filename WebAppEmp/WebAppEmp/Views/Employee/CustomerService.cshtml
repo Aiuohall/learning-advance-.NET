@@ -1,0 +1,59 @@
+﻿@model WebAppEmp.ViewModel.ServiceViewModel
+
+@{
+    ViewData["Title"] = "CustomerService";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Customer Service Data</h1>
+<br />
+<br />
+
+<div>
+    <text>@Model.Employees.Id</text>
+    <text>@Model.Employees.Name</text>
+    <text>@Model.Employees.Salary</text>
+</div>
+<div>
+    @foreach (var data in Model.Customers)
+    {
+        <br />
+        <text>@data.Phone</text>
+        <br />
+        <text>@data.Name</text>
+        <br />
+    }
+</div>
+
+<div>
+    @*{
+            bool f = false;
+
+            var count = Model.Customers.Count;
+            if (count > 2)
+                f = true;
+        }*@
+
+    <p>@Model.Customers.Count</p>
+    @if (ViewBag.State)
+    {
+        <text>Done for Today</text>
+    }
+    else
+    {
+        <text>Incomplete for Today</text>
+    }
+
+    <br />
+
+    @if ((bool)ViewData["State"])
+    {
+        <text>Done Data for Today</text>
+    }
+    else
+    {
+        <text>Incomplete for Today</text>
+    }
+
+</div>
+

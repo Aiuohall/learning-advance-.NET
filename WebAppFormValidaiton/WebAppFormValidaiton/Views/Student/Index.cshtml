@@ -1,0 +1,27 @@
+﻿@model WebAppFormValidaiton.Models.Student
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+
+@Html.Label("ID")
+@Html.TextBox("StudentId")
+
+@Html.Label("Name")
+@Html.TextBox("StudentName")
+<br />
+
+@Html.LabelFor(s => s.Id)
+@Html.TextBoxFor(s => s.Id)
+
+@Html.LabelFor(s => s.BloodGroup)
+@Html.TextBoxFor(s => s.BloodGroup)
+<br />
+
+@Html.EditorForModel()
+
+
+

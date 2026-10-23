@@ -1,0 +1,26 @@
+﻿@model WebAppEmp.Models.Employee
+
+@{
+    ViewData["Title"] = "EachEmployee";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>EachEmployee</h1>
+<br />
+<br />
+@if (ViewBag.State == false)
+{
+    <h2 class="alert alert-info">@ViewData["Msg"]</h2>
+}
+else
+{
+<div>
+    <h4>Id</h4>
+    <p>@Model.Id</p>
+    <h4>Id</h4>
+    <p>@Model.Name</p>
+    <h4>Id</h4>
+    <p>@Model.Salary</p>
+</div>
+}
+

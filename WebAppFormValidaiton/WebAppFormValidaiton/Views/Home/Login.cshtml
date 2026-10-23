@@ -1,0 +1,21 @@
+﻿@using WebAppFormValidaiton.Models 
+
+@{
+    ViewData["Title"] = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Login</h1>
+
+
+<form action="/login" method="post">
+    <input type="text" name="username" />
+    <input type="password" name="password" />
+    <button type="submit">Login</button>
+</form>
+
+@*<form asp-controller="Student" asp-action="Index" method="post">
+    <input asp-for="Id" />
+    <input asp-for="Name" type="password" />
+    <button type="submit">Login</button>
+</form>*@
